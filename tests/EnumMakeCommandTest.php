@@ -1,6 +1,6 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum;
+namespace mdevoogd\LaravelDatabaseEnum;
 
 use Illuminate\Support\Str;
 
@@ -15,9 +15,9 @@ class EnumMakeCommandTest extends TestCase
      */
     public function requireArguments()
     {
-        $this->expectExceptionMessage('Not enough arguments (missing: "name")');
-
-        $this->artisan('make:enum');
+        $this->artisan('make:enum')
+            ->expectsQuestion('What should the enum be named?', 'UserRoleTypes')
+            ;
     }
 
     /**
@@ -27,7 +27,7 @@ class EnumMakeCommandTest extends TestCase
     {
         $this->artisan("make:enum", [
             "name" => "UserRoleTypes",
-            "--model" => "dobron\\LaravelDatabaseEnum\\Model\\UserRole",
+            "--model" => "mdevoogd\\LaravelDatabaseEnum\\Model\\UserRole",
             "--value" => "name",
         ])->assertExitCode(0);
 
@@ -71,7 +71,7 @@ class EnumMakeCommandTest extends TestCase
     {
         $this->artisan("make:enum", [
             "name" => "UserRoleTypes",
-            "--model" => "dobron\\LaravelDatabaseEnum\\Model\\UserRole",
+            "--model" => "mdevoogd\\LaravelDatabaseEnum\\Model\\UserRole",
             "--path" => "Other/Directory",
         ])->assertExitCode(0);
 
@@ -85,13 +85,13 @@ class EnumMakeCommandTest extends TestCase
     {
         $this->artisan("make:enum", [
             "name" => "UserRoles",
-            "--model" => "dobron\\LaravelDatabaseEnum\\Model\\UserRole",
+            "--model" => "mdevoogd\\LaravelDatabaseEnum\\Model\\UserRole",
             "--value" => "name",
         ])->assertExitCode(0);
 
         $this->artisan("make:enum", [
             "name" => "UserRoles",
-            "--model" => "dobron\\LaravelDatabaseEnum\\Model\\UserRole",
+            "--model" => "mdevoogd\\LaravelDatabaseEnum\\Model\\UserRole",
             "--value" => "name",
             "--force" => true,
         ])->assertExitCode(0);
@@ -105,7 +105,7 @@ class EnumMakeCommandTest extends TestCase
      */
     protected function appPath($path = '')
     {
-        $appPath = $this->getBasePath() . '/app';
+        $appPath = TestCase::applicationBasePath() . '/app';
 
         return $appPath . Str::start($path, '/');
     }

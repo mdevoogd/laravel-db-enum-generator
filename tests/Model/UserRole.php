@@ -1,6 +1,6 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum\Model;
+namespace mdevoogd\LaravelDatabaseEnum\Model;
 
 use Illuminate\Database\Eloquent\Model;
 

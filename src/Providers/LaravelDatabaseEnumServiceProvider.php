@@ -1,8 +1,8 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum\Providers;
+namespace mdevoogd\LaravelDatabaseEnum\Providers;
 
-use dobron\LaravelDatabaseEnum\Console\Commands\EnumMakeCommand;
+use mdevoogd\LaravelDatabaseEnum\Console\Commands\EnumMakeCommand;
 use Illuminate\Support\ServiceProvider;
 
 /**

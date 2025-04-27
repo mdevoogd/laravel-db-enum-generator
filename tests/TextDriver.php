@@ -1,6 +1,6 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum;
+namespace mdevoogd\LaravelDatabaseEnum;
 
 use PHPUnit\Framework\Assert;
 use Spatie\Snapshots\Driver;

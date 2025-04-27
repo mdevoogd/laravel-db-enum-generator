@@ -1,6 +1,6 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum;
+namespace mdevoogd\LaravelDatabaseEnum;
 
 /**
  * The stub assembler.

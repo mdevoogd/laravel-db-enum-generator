@@ -1,9 +1,9 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum\Console\Commands;
+namespace mdevoogd\LaravelDatabaseEnum\Console\Commands;
 
-use dobron\LaravelDatabaseEnum\EnumDefinition;
-use dobron\LaravelDatabaseEnum\StubAssembler;
+use mdevoogd\LaravelDatabaseEnum\EnumDefinition;
+use mdevoogd\LaravelDatabaseEnum\StubAssembler;
 use Doctrine\Inflector\Inflector;
 use Doctrine\Inflector\InflectorFactory;
 use Illuminate\Console\GeneratorCommand;

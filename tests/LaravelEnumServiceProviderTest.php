@@ -1,8 +1,8 @@
 <?php
 
-namespace dobron\LaravelDatabaseEnum;
+namespace mdevoogd\LaravelDatabaseEnum;
 
-use dobron\LaravelDatabaseEnum\Providers\LaravelDatabaseEnumServiceProvider;
+use mdevoogd\LaravelDatabaseEnum\Providers\LaravelDatabaseEnumServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 /**
