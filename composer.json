@@ -1,5 +1,5 @@
 {
-    "name": "dobron/laravel-db-enum-generator",
+    "name": "mdevoogd/laravel-db-enum-generator",
     "type": "library",
     "description": "Database enum generator for Laravel.",
     "keywords": [
@@ -10,11 +10,11 @@
         "laravel",
         "enum"
     ],
-    "homepage": "https://github.com/richardDobron/laravel-db-enum-generator",
+    "homepage": "https://github.com/mdevoogd/laravel-db-enum-generator",
     "license": "MIT",
     "authors": [{
-        "name": "Richard Dobroň",
-        "homepage": "https://github.com/richardDobron",
+        "name": "Mark de Voogd",
+        "homepage": "https://github.com/mdevoogd",
         "role": "Developer"
     }],
     "require": {
@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "dobron\\LaravelDatabaseEnum\\": "src"
+            "mdevoogd\\LaravelDatabaseEnum\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "dobron\\LaravelDatabaseEnum\\": "tests"
+            "mdevoogd\\LaravelDatabaseEnum\\": "tests"
         }
     },
     "scripts": {
@@ -48,7 +48,7 @@
         },
         "laravel": {
             "providers": [
-              "dobron\\LaravelDatabaseEnum\\Providers\\LaravelDatabaseEnumServiceProvider"
+              "mdevoogd\\LaravelDatabaseEnum\\Providers\\LaravelDatabaseEnumServiceProvider"
             ]
         }
     },
