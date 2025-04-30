@@ -10,7 +10,7 @@
 
 namespace DummyNamespace;
 
-class DummyClass
+enum DummyClass: int
 {
 DummyConstantsDummyMap
 }

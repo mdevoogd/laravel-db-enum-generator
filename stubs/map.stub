@@ -1,8 +1,8 @@
 
 
-    public static function map(): array
+    public function getLabel(): ?string
     {
-        return [
+        return match ($this) {
 DummyKeyValuePairs
-        ];
+        };
     }

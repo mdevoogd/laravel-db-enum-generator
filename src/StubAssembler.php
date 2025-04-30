@@ -78,7 +78,7 @@ class StubAssembler
 
             $key = $this->export($enum->key, $padding);
 
-            return str_repeat(' ', $padding) . "public const $enum->name = $key;";
+            return str_repeat(' ', $padding) . "case $enum->name = $key;";
         }, $this->enums);
 
         $this->stub = str_replace('DummyConstants', implode(PHP_EOL, $constants), $this->stub);
@@ -133,7 +133,7 @@ class StubAssembler
 
             $value = $this->export($enum->value, $padding);
 
-            return str_repeat(' ', $padding) . "static::$enum->name => {$value},";
+            return str_repeat(' ', $padding) . "self::$enum->name => {$value},";
         }, $this->enums);
 
         $this->stub = str_replace('DummyKeyValuePairs', implode(PHP_EOL, $pairs), $this->stub);

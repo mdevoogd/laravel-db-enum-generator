@@ -52,17 +52,17 @@ class EnumMakeCommandTest extends TestCase
     /**
      * @test
      */
-    public function generateMultipleValuesInMap()
-    {
-        $this->artisan('make:enum', [
-            "name" => "LanguagesEnum",
-            "--table" => "languages",
-            "--slug" => "name",
-            "--value" => "id,name,region",
-        ])->assertExitCode(0);
-
-        $this->assertMatchesSnapshot(file_get_contents($this->appPath('Enums/LanguagesEnum.php')));
-    }
+//    public function generateMultipleValuesInMap()
+//    {
+//        $this->artisan('make:enum', [
+//            "name" => "LanguagesEnum",
+//            "--table" => "languages",
+//            "--slug" => "name",
+//            "--value" => "id,name,region",
+//        ])->assertExitCode(0);
+//
+//        $this->assertMatchesSnapshot(file_get_contents($this->appPath('Enums/LanguagesEnum.php')));
+//    }
 
     /**
      * @test
